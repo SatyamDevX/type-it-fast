@@ -34,3 +34,16 @@ Welcome to the **type it fast** – a simple and responsive typing speed game wh
    ```bash
    git clone https://github.com/your-username/custom-typing-test.git
 
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙌 Acknowledgments
+
+- 🧩 [10FastFingers](https://10fastfingers.com) for the awesome typing widget  
+- 📷 [Pexels](https://pexels.com) for the royalty-free images
+
