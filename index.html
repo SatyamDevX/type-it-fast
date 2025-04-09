@@ -131,11 +131,14 @@
     <script>
         function updateIframe() {
             var userInput = document.getElementById("textInput").value.trim();
+            var duration = document.getElementById("durationSelect").value;
             var iframe = document.getElementById("textIframe");
+        
             if (userInput) {
-                iframe.src = "https://10fastfingers.com/widgets/ttembeddable/?dur=60&rand=1&words=" + encodeURIComponent(userInput);
+                iframe.src = "https://10fastfingers.com/widgets/ttembeddable/?dur=" + duration + "&rand=1&words=" + encodeURIComponent(userInput);
             }
         }
+
     </script>
 </head>
 <body>
@@ -154,6 +157,13 @@
                 <input type="text" id="textInput" placeholder="Enter custom text here" value="The quick brown fox jumps over the lazy dog" required>
                 <button type="submit">Submit</button>
             </form>
+            <select id="durationSelect" style="margin-right: 10px; padding: 10px; border-radius: 5px;">
+                <option value="60">1 Minute</option>
+                <option value="120">2 Minutes</option>
+                <option value="300">5 Minutes</option>
+                <option value="600">10 Minutes</option>
+            </select>
+
             <iframe id="textIframe" src="" frameborder="0"></iframe>
         </div>
         <div class="sidebar">
