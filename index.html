@@ -130,9 +130,11 @@
     </style>
     <script>
         function updateIframe() {
-            var userInput = document.getElementById("textInput").value;
+            var userInput = document.getElementById("textInput").value.trim();
             var iframe = document.getElementById("textIframe");
-            iframe.src = "https://10fastfingers.com/widgets/ttembeddable/?dur=60&rand=1&words=" + encodeURIComponent(userInput);
+            if (userInput) {
+                iframe.src = "https://10fastfingers.com/widgets/ttembeddable/?dur=60&rand=1&words=" + encodeURIComponent(userInput);
+            }
         }
     </script>
 </head>
@@ -149,7 +151,7 @@
         <div class="main-content">
             <h1>Custom Typing Test</h1>
             <form onsubmit="event.preventDefault(); updateIframe();">
-                <input type="text" id="textInput" placeholder="Enter custom text here" required>
+                <input type="text" id="textInput" placeholder="Enter custom text here" value="The quick brown fox jumps over the lazy dog" required>
                 <button type="submit">Submit</button>
             </form>
             <iframe id="textIframe" src="" frameborder="0"></iframe>
